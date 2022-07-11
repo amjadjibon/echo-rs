@@ -1,7 +1,7 @@
 use tokio::io::{AsyncReadExt, AsyncWriteExt};
 use tokio::net::TcpStream;
 
-const SERVER_ADDR: &str = "localhost:1234";
+const SERVER_ADDR: &str = "localhost:8080";
 
 #[tokio::main]
 async fn main() {
