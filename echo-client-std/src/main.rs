@@ -1,21 +1,9 @@
 use std::io::prelude::*;
 use std::net::TcpStream;
-use std::env;
 
 const SERVER_ADDR: &str = "localhost:1234";
 
 fn main() {
-    let mut args: Vec<String> = env::args().collect();
-    args.remove(0);
-    println!("{:?}", args);
-
-    let addr = args[0].clone();
-    let port = args[1].clone();
-    let message = args[2].clone();
-
-    println!("{}:{}", addr, port);
-    println!("{}", message);
-
     println!("Connecting to {}", SERVER_ADDR);
     let stream = TcpStream::connect(SERVER_ADDR);
 
